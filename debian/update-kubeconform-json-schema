@@ -1,0 +1,13 @@
+#!/bin/bash
+# Fetch kubernetes json schema from a remote git repository
+set -e
+GIT_URL=https://gitlab.wikimedia.org/repos/sre/kubernetes-json-schema.git
+SCHEMA_CACHE=/var/cache/kubeconform
+
+if ! command -v git &> /dev/null; then
+    echo "git is required"
+    exit 1
+fi
+
+find "$SCHEMA_CACHE" -mindepth 1 -maxdepth 1 -exec rm -rf "{}" \;
+git clone --quiet --depth 1 "$GIT_URL" "$SCHEMA_CACHE"

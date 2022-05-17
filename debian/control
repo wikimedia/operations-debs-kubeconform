@@ -1,0 +1,18 @@
+Source: kubeconform
+Section: devel
+Priority: optional
+Maintainer: Janis Meybohm <jmeybohm@wikimedia.org>
+Build-Depends: debhelper-compat (= 12),
+               dh-golang,
+               golang-any (>= 2:1.13),
+               git
+Standards-Version: 4.1.3
+Homepage: https://github.com/yannh/kubeconform
+XS-Go-Import-Path: github.com/yannh/kubeconform
+
+Package: kubeconform
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: git
+Description: A FAST Kubernetes manifests validator, with support for
+  Custom Resources!

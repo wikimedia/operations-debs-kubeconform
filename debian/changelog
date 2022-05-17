@@ -1,0 +1,5 @@
+kubeconform (0.4.13-1) buster-wikimedia; urgency=medium
+
+  * Initial release
+
+ -- Janis Meybohm <jmeybohm@wikimedia.org>  Tue, 17 May 2022 18:07:48 +0200
